@@ -1,0 +1,60 @@
+ 1) Divisible by 7
+for i in range(1, 101):
+    if i % 7 == 0:
+        print(i)
+
+ 2) Sum of Even Numbers
+ total = 0
+for i in range(1, 51):
+    if i % 2 == 0:
+        total += i
+  print("Sum of even numbers:", total)
+
+ 3) Password Validation
+correct_password = "1234"
+attempts = 0
+
+while attempts < 3:
+    pwd = input("Enter password: ")
+    if pwd == correct_password:
+        print("Access granted")
+        break
+    attempts += 1
+else:
+    print("Blocked")
+
+4) Countdown
+num = 10
+while num > 0:
+    print(num)
+    if num == 5:
+        print("Midpoint reached")
+        break
+    num -= 1
+ 
+5) Divisible by 13 and 7
+for i in range(1, 501):
+    if i % 7 == 0 and i % 13 == 0:
+        print("First number divisible by 13 and 7 is:", i)
+         break
+
+6) Word Length Dictionary
+words = ["apple", "cat", "banana", "dog", "computer"]
+word_length = {word: len(word) for word in words if len(word) > 4}
+print(word_length)
+
+ 7) Character Frequency Dictionary
+text = "hello world"
+frequency = {char: text.count(char) for char in text}
+print(frequency)
+
+8) Prime Numbers List:
+def is_prime(n):
+    if n < 2:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+prime_list = [num if is_prime(num) else "Not Prime" for num in range(100, 151)]
+print(prime_list)
